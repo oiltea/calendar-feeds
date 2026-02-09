@@ -38,7 +38,7 @@ export default async function fuelPrice(request) {
 
   ics.push(
     "BEGIN:VEVENT",
-    `UID:${dateStr}-${region}@fuelprice`,
+    `UID:${dateStr}-${region}-${primary}@fuelprice`,
     `DTSTAMP:${now}`,
     `DTSTART;VALUE=DATE:${dateStr}`,
     `DTEND;VALUE=DATE:${dateStr}`,
