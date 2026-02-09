@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "weather-ics",
+	"name": "i-calendar",
 	"main": "src/index.js",
 	"compatibility_date": "2026-02-05",
 	"observability": {
