@@ -39,7 +39,7 @@ export default async function weather(request) {
     descLines.push(`🌡 温度：${d.min_temperature}℃~${d.max_temperature}℃`)
     descLines.push(`☀ 白天天气：${d.day_condition}`)
     descLines.push(`🌙 夜间天气：${d.night_condition}`)
-    descLines.push(`😷空气质量：${d.air_quality}`)
+    descLines.push(`😷 空气质量：${d.air_quality}`)
     descLines.push(`🔗 数据来源：腾讯天气`)
 
     ics.push(
@@ -49,7 +49,7 @@ export default async function weather(request) {
       `DTSTART;VALUE=DATE:${start}`,
       `DTEND;VALUE=DATE:${end}`,
       `SUMMARY:${query} ${d.day_condition} ${d.min_temperature}℃~${d.max_temperature}℃`,
-      `DESCRIPTION:${descLines.join("\\n")}`,
+      `DESCRIPTION:${descLines.join("\\n\\n")}`,
       "END:VEVENT"
     )
   }
